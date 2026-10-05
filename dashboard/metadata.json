@@ -1,0 +1,6 @@
+{
+  "name": "Edge-Cloud Voice Assistant Live Diagnostic",
+  "description": "Real-time telemetry and transcript dashboard for hybrid edge wake-word detection and cloud ASR streaming.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

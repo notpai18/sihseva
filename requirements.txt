@@ -1,0 +1,7 @@
+piper-tts
+numpy
+scipy
+soundfile
+sounddevice
+moonshine-voice
+websockets

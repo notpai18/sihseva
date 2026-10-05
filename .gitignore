@@ -1,0 +1,17 @@
+# Python virtual environment -- recreate with:
+#   python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
+.venv/
+__pycache__/
+*.pyc
+
+# Downloaded Piper voice models (~hundreds of MB) -- redownload with the
+# command in README.md ("Quick start").
+voices/
+
+# Generated dataset -- regenerable via scripts/generate_dataset.py. Large
+# binary wav output doesn't belong in git; commit code and config, not clips.
+data/
+
+# Downloaded ASR model (Moonshine, for scripts/asr_server.py) -- redownloaded
+# automatically / via a one-time setup command, see README.md.
+models/

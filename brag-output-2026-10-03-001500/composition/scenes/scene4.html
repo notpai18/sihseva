@@ -1,0 +1,95 @@
+<template id="scene4">
+  <style>
+    #root {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at center, #2B000B 0%, #0D0003 100%);
+      color: #FFFFFF;
+      font-family: 'Outfit', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .demo-glass {
+      width: 1200px;
+      background: rgba(255, 0, 51, 0.04);
+      border: 2px solid rgba(255, 0, 51, 0.4);
+      backdrop-filter: blur(25px);
+      border-radius: 32px;
+      padding: 56px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 0 80px rgba(255, 0, 51, 0.3);
+    }
+    .user-voice {
+      font-size: 64px;
+      font-weight: 900;
+      color: #FF0033;
+      margin-bottom: 32px;
+      text-shadow: 0 0 30px rgba(255, 0, 51, 0.7);
+    }
+    .waves {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      height: 90px;
+      margin-bottom: 40px;
+    }
+    .wbar {
+      width: 14px;
+      height: 24px;
+      background: linear-gradient(180deg, #FF0033, #FF6600);
+      border-radius: 8px;
+      box-shadow: 0 0 15px #FF0033;
+    }
+    .gold-badge {
+      background: rgba(255, 0, 51, 0.15);
+      border: 2px solid #FF0033;
+      color: #FFFFFF;
+      padding: 20px 48px;
+      border-radius: 50px;
+      font-size: 32px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      box-shadow: 0 0 40px rgba(255, 0, 51, 0.4);
+    }
+  </style>
+
+  <div id="root" data-composition-id="scene4" data-width="1920" data-height="1080" data-layout-allow-overflow="true">
+    <div class="demo-glass">
+      <div class="user-voice" id="s4-voice" data-layout-allow-overlap="true">🎤 USER SPEAKS: "HEY TARA!"</div>
+      <div class="waves" id="s4-waves" data-layout-allow-overlap="true">
+        <div class="wbar" id="wb1"></div>
+        <div class="wbar" id="wb2"></div>
+        <div class="wbar" id="wb3"></div>
+        <div class="wbar" id="wb4"></div>
+        <div class="wbar" id="wb5"></div>
+        <div class="wbar" id="wb6"></div>
+        <div class="wbar" id="wb7"></div>
+      </div>
+      <div class="gold-badge" id="s4-badge" data-layout-allow-overlap="true">⚡ 100% LOCAL MATCH — ZERO CLOUD BYTES LEAKED</div>
+    </div>
+  </div>
+
+  <script>
+    const tl = gsap.timeline({ paused: true });
+
+    tl.fromTo("#s4-voice", { opacity: 0, y: 20 }, { duration: 0.5, opacity: 1, y: 0, ease: "power2.out" }, 0.1)
+      .to("#wb1", { duration: 0.4, height: 80, repeat: 3, yoyo: true, ease: "power1.inOut" }, 0.3)
+      .to("#wb2", { duration: 0.4, height: 100, repeat: 3, yoyo: true, ease: "power1.inOut" }, 0.2)
+      .to("#wb3", { duration: 0.4, height: 120, repeat: 3, yoyo: true, ease: "power1.inOut" }, 0.4)
+      .to("#wb4", { duration: 0.4, height: 90, repeat: 3, yoyo: true, ease: "power1.inOut" }, 0.25)
+      .to("#wb5", { duration: 0.4, height: 110, repeat: 3, yoyo: true, ease: "power1.inOut" }, 0.35)
+      .to("#wb6", { duration: 0.4, height: 70, repeat: 3, yoyo: true, ease: "power1.inOut" }, 0.15)
+      .to("#wb7", { duration: 0.4, height: 95, repeat: 3, yoyo: true, ease: "power1.inOut" }, 0.3)
+      .fromTo("#s4-badge", { opacity: 0, scale: 0.8 }, { duration: 0.6, opacity: 1, scale: 1, ease: "back.out(1.5)" }, 1.2);
+
+    window.__timelines = window.__timelines || {};
+    window.__timelines["scene4"] = tl;
+  </script>
+</template>
